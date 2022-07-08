@@ -2,19 +2,42 @@
 
 namespace meuPrimeiroProjeto
 {
-   class Program
-   {
-       static void Main(string[] args)
-       {
-         ContaCorrente conta_do_Gui = new ContaCorrente ("Gui", 1909, 40, 20);
-         ContaCorrente conta_do_Carvalho = new ContaCorrente ("Carvalho", 2806, 15, 10);
-         ContaCorrente conta_do_Araujo = new ContaCorrente ("Araújo", 2004, 19, 09);
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ContaCorrente ContaDoGui = new ContaCorrente  ("Gui", 12345, 678, 100);
+            ContaCorrente ContaDoKevin = new ContaCorrente  ("Kevin", 12345, 123, 10);
+            ContaCorrente ContaDoPhil = new ContaCorrente  ("Phil", 12345, 790, 1000);
+            
+            Console.WriteLine("A conta é do (a) " + ContaDoGui.Titular + 
+            ", a agência é " + ContaDoGui.Agencia + " e o número é " 
+            + ContaDoGui.Numero + "Saldo: " + ContaDoGui.Saldo + ".");
 
-         Console.WriteLine("A conta é do (a) " + conta_do_Gui.Titular + ", a agência é " + conta_do_Gui.Agencia + ", o número é " + conta_do_Gui.Numero + " e o saldo é " + conta_do_Gui.Saldo + ".");
-         Console.WriteLine("A conta é do (a) " + conta_do_Carvalho.Titular + ", a agência é " + conta_do_Carvalho.Agencia + ", o número é " + conta_do_Carvalho.Numero + " e o saldo é " + conta_do_Carvalho.Saldo + ".");
-         Console.WriteLine("A conta é do (a) " + conta_do_Araujo.Titular + ", a agência é " + conta_do_Araujo.Agencia + ", o número é " + conta_do_Araujo.Numero + " e o saldo é " + conta_do_Araujo.Saldo + ".");
+            Console.WriteLine("A conta é do (a) " + ContaDoKevin.Titular + 
+            ", a agência é " + ContaDoKevin.Agencia + " e o número é " 
+            + ContaDoKevin.Numero + "Saldo: " + ContaDoKevin.Saldo  + ".");
 
-       }
-   } 
-}    
+            Console.WriteLine("A conta é do (a) " + ContaDoPhil.Titular + 
+            ", a agência é " + ContaDoPhil.Agencia + " e o número é " 
+            + ContaDoPhil.Numero +  "Saldo: " + ContaDoPhil.Saldo + ".");
+
+            bool sacar_conta1 = ContaDoGui.Sacar(100);
+            bool sacar_conta2 = ContaDoKevin.Sacar(100);
+            bool sacar_conta3 = ContaDoPhil.Sacar(100);
+
+            Console.WriteLine("A conta é do (a) " + ContaDoGui.Titular + 
+            ", a agência é " + ContaDoGui.Agencia + " e o número é " 
+            + ContaDoGui.Numero + "Saldo: " + ContaDoGui.Saldo + ".");
+
+            Console.WriteLine("A conta é do (a) " + ContaDoKevin.Titular + 
+            ", a agência é " + ContaDoKevin.Agencia + " e o número é " 
+            + ContaDoKevin.Numero + "Saldo: " + ContaDoKevin.Saldo  + ".");
+
+            Console.WriteLine("A conta é do (a) " + ContaDoPhil.Titular + 
+            ", a agência é " + ContaDoPhil.Agencia + " e o número é " 
+            + ContaDoPhil.Numero +  "Saldo: " + ContaDoPhil.Saldo + ".");
+        }
+    }
+}
 
